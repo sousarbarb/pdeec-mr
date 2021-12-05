@@ -1,0 +1,6 @@
+controller_frequency: 25
+planner_frequency: 0
+#base_global_planner: navfn/NavfnROS
+#base_global_planner: carrot_planner/CarrotPlanner
+base_global_planner: global_planner/GlobalPlanner
+base_local_planner: omnidirectional_local_planner/OmnidirectionalLocalPlannerROS

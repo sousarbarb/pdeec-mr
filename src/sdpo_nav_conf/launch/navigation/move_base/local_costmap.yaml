@@ -1,0 +1,7 @@
+local_costmap:
+  plugins: []
+
+  rolling_window: true
+  width: 10
+  height: 10
+  resolution: 0.05

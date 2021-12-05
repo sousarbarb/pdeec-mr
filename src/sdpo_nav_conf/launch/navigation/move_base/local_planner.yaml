@@ -1,0 +1,32 @@
+OmnidirectionalLocalPlannerROS:
+  buffer_future_size: 10
+
+  nom_lin_vel: 0.5
+
+  ff_ctrl_on: true
+
+  # Acceleration limits (m/s^2 or rad/s^2)
+  acc_lim_x:  2
+  acc_lim_y:  2
+  acc_lim_th: 5
+  # Velocity limits (m/s or rad/s)
+  max_vel_x:   1.5
+  max_vel_y:   1.5
+  max_rot_vel: 6
+  # Goal tolerances (m or rad)
+  xy_goal_tolerance:  0.05
+  yaw_goal_tolerance: 0.09
+  # Robot 1st-order velocity model
+  robot_vel_kp_x: 1
+  robot_vel_kp_y: 1
+  robot_vel_kp_th: 1
+  robot_vel_tau_x: 0.129073
+  robot_vel_tau_y: 0.12807
+  robot_vel_tau_th: 0.099488
+  # PD controller gains
+  pd_ctrl_kc_x: 4.417214
+  pd_ctrl_kc_y: 4.382877
+  pd_ctrl_kc_th: 3.404729
+  pd_ctrl_td_x: 0.069690
+  pd_ctrl_td_y: 0.067916
+  pd_ctrl_td_th: 0.002368

@@ -1,0 +1,33 @@
+<launch>
+  <arg name="robot_id" value="$(optenv ROBOT_ID unnamed_robot)"/>
+
+  <group ns="$(arg robot_id)">
+    <node pkg="move_base" type="move_base" respawn="false"
+          name="move_base" clear_params="true"
+          output="$(optenv ROBOT_OUTPUT screen)">
+      <!-- Planner configurations -->
+      <rosparam command="load" subst_value="True"
+                file="$(dirname)/move_base.yaml"/>
+
+      <!-- Common cost map configurations -->
+      <rosparam command="load" subst_value="True"
+                ns="global_costmap"
+                file="$(dirname)/common_costmap.yaml"/>
+      <rosparam command="load" subst_value="True"
+                ns="local_costmap"
+                file="$(dirname)/common_costmap.yaml"/>
+
+      <!-- Local planner -->
+      <rosparam command="load" subst_value="True"
+                file="$(dirname)/local_planner.yaml"/>
+      <rosparam command="load" subst_value="True"
+                file="$(dirname)/local_costmap.yaml"/>
+
+      <!-- Global planner -->
+      <rosparam command="load" subst_value="True"
+                file="$(dirname)/global_planner.yaml"/>
+      <rosparam command="load" subst_value="True"
+                file="$(dirname)/global_costmap.yaml"/>
+    </node>
+  </group>
+</launch>

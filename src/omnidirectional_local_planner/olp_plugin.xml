@@ -1,0 +1,11 @@
+<library path="lib/libomnidirectional_local_planner">
+  <class name="omnidirectional_local_planner/OmnidirectionalLocalPlannerROS"
+         type="omnidirectional_local_planner::OmnidirectionalLocalPlannerROS"
+         base_class_type="nav_core::BaseLocalPlanner">
+    <description>
+      A simple plugin for BaseLocalPlanner for following the global path as it
+      is. The use cases of this plugin are focused on holonomic/omnidirectional
+      mobile robots.
+    </description>
+  </class>
+</library>

@@ -1,0 +1,13 @@
+base_frame_id: $(arg robot_id)/base_footprint
+odom_frame_id: $(arg robot_id)/odom
+
+cinematic_type: omnidirectional
+
+wheel_radius: 0.049283
+dist_to_wheels: 0.191367
+wheel_front_right_index: 0
+wheel_front_right_inverted: true
+wheel_front_left_index: 1
+wheel_front_left_inverted: true
+wheel_back_index: 2
+wheel_back_inverted: true

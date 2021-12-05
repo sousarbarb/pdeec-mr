@@ -1,0 +1,10 @@
+#NavfnROS:
+#  allow_unknown: true
+#  default_tolerance: 0.1
+
+GlobalPlanner:
+  outline_map: false
+  orientation_mode: 2
+
+  use_grid_path: true
+  use_dijkstra: false

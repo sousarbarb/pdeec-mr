@@ -1,0 +1,12 @@
+<launch>
+  <arg name="robot_id" value="$(optenv ROBOT_ID unnamed_robot)"/>
+  <arg name="filename_rviz_config" default="nav.rviz"/>
+
+  <node pkg="rviz" type="rviz" name="$(arg robot_id)_rviz"
+        args="-d $(arg filename_rviz_config)"
+        clear_params="true" output="$(optenv ROBOT_OUTPUT screen)">
+
+    <!-- Remap default RViz 2D Nav Goal -->
+    <remap from="/move_base_simple/goal" to="/$(arg robot_id)/move_base_simple/goal"/>
+  </node>
+</launch>

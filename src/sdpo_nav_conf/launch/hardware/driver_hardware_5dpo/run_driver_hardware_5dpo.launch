@@ -1,0 +1,12 @@
+<launch>
+  <arg name="robot_id" value="$(optenv ROBOT_ID unnamed_robot)"/>
+
+  <group ns="$(arg robot_id)">
+    <node pkg="driver_hardware_5dpo" type="driver_hardware_5dpo_node"
+          name="driver_hardware_5dpo" clear_params="true"
+          output="$(optenv ROBOT_OUTPUT screen)">
+      <rosparam command="load" subst_value="True"
+                file="$(dirname)/driver_hardware_5dpo.yaml"/>
+    </node>
+  </group>
+</launch>

@@ -1,0 +1,7 @@
+<launch>
+  <arg name="robot_id" value="$(optenv ROBOT_ID unnamed_robot)"/>
+  <arg name="demo_directory" value="$(dirname)"/>
+  <arg name="root_directory" value="$(dirname)/../.."/>
+
+  <include file="$(arg root_directory)/navigation/move_base/run_move_base.launch"/>
+</launch>

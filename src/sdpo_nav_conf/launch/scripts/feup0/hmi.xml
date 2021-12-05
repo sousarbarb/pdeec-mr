@@ -1,0 +1,9 @@
+<launch>
+  <arg name="robot_id" value="$(optenv ROBOT_ID unnamed_robot)"/>
+  <arg name="demo_directory" value="$(dirname)"/>
+  <arg name="root_directory" value="$(dirname)/../.."/>
+
+  <include file="$(dirname)/../../hmi/rviz/run_rviz.launch">
+    <arg name="filename_rviz_config" value="$(arg demo_directory)/config.rviz"/>
+  </include>
+</launch>
